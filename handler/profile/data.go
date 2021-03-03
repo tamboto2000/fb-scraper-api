@@ -139,37 +139,37 @@ func (p *Profile) Data(w http.ResponseWriter, r *http.Request) {
 func syncAboutDetail(prof *facebook.Profile, fields []string) error {
 	for _, f := range fields {
 		if f == "workAndEducation" {
-			if err := prof.SyncWorkAndEducation(); err != nil {
+			if err := prof.About.SyncWorkAndEducation(); err != nil {
 				return err
 			}
 		}
 
 		if f == "placesLived" {
-			if err := prof.SyncPlacesLived(); err != nil {
+			if err := prof.About.SyncPlacesLived(); err != nil {
 				return err
 			}
 		}
 
 		if f == "contactAndBasicInfo" {
-			if err := prof.SyncContactAndBasicInfo(); err != nil {
+			if err := prof.About.SyncContactAndBasicInfo(); err != nil {
 				return err
 			}
 		}
 
 		if f == "familyAndRelationships" {
-			if err := prof.SyncFamilyAndRelationships(); err != nil {
+			if err := prof.About.SyncFamilyAndRelationships(); err != nil {
 				return err
 			}
 		}
 
 		if f == "details" {
-			if err := prof.SyncDetails(); err != nil {
+			if err := prof.About.SyncDetails(); err != nil {
 				return err
 			}
 		}
 
 		if f == "lifeEvents" {
-			if err := prof.SyncLifeEvents(); err != nil {
+			if err := prof.About.SyncLifeEvents(); err != nil {
 				return err
 			}
 		}
